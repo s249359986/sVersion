@@ -1,0 +1,70 @@
+#__sversion {
+  @font: 13;
+  @fontSize: 13px;
+
+  color: #000;
+  font-size: @fontSize;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+
+  /* global */
+
+  .vc-max-height {
+    max-height: 250em / @font;
+  }
+  .vc-max-height-line {
+    max-height: 44em / @font;
+  }
+  .vc-min-height {
+    min-height: 40em / @font;
+  }
+
+  dd, dl, pre {
+    margin: 0;
+  }
+
+  /* compoment */
+
+  .vc-switch {
+    display: block;
+    position: fixed;
+    right: 10em / @font;
+    bottom: 10em / @font;
+    color: #FFF;
+    background-color: #04BE02;
+    line-height: 1;
+    font-size: 14em / @font;
+    padding: 8em / @font 16em / @font;
+    z-index: 10000;
+    border-radius: 4em / @font;
+    box-shadow: 0 0 8em / @font rgba(0,0,0,0.4);
+  }
+
+  .vc-mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0, 0);
+    z-index: 9999;
+    transition: background .3s;
+    -webkit-tap-highlight-color: transparent;
+    overflow-y: scroll;
+  }
+
+  .vc-panel {
+    border-radius: 5px;
+    z-index: 9999;
+    position: absolute;
+    display: none;
+    top:50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+   background-color:rgba(38,45,38,.9);
+   color:#fff;
+   font-size: 20px;
+   padding: 10px;
+  }
+}

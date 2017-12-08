@@ -1,6 +1,6 @@
 {
   "name": "sversion",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A lightweight, extendable front-end developer tool for version",
   "homepage": "https://github.com/s249359986/sVersion",
   "main": "dist/sVersion.min.js",

@@ -133,9 +133,7 @@ class SVersion {
       tool.setStorage('switch_x', that.switchPos.x);
       tool.setStorage('switch_y', that.switchPos.y);
     });
-    $.bind($switch, 'touchmove', function(e) {
-      console.log('-------------------')
-      console.log(ZINYI123)
+    $.bind($switch, 'touchmove', function(e) {            
       if (e.touches.length > 0) {
         let offsetX = e.touches[0].pageX - that.switchPos.startX,
             offsetY = e.touches[0].pageY - that.switchPos.startY;

@@ -35,13 +35,12 @@ module.exports = {
   plugins: [
     new webpack.BannerPlugin([
         'sVersion v' + pkg.version + ' (' + pkg.homepage + ')'
-    ].join('\n'))
-
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // })
+    ].join('\n')),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
     // ,new ExtractTextPlugin('[name].min.css') // 将css独立打包
   ]
 };

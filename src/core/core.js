@@ -3,6 +3,27 @@
  * sVersion core class
  */
 
+
+ // function checkVersion () {
+ //     let curTime = 0
+ //     let endTime = 0
+ //     document.addEventListener('touchstart', function () {
+ //         curTime = new Date().getTime()
+ //     })
+ //     document.addEventListener('touchend', function () {
+ //         endTime = new Date().getTime()
+ //         if ((endTime - curTime) > 3000) {
+ //             curTime = new Date().getTime()
+ //             alert('1.3.5')
+ //         }
+ //         curTime = 0
+ //         endTime = 0
+ //     })
+ // }
+ // checkVersion()
+
+
+
 import pkg from '../../package.json';
 import * as tool from '../lib/tool.js';
 import $ from '../lib/query.js';
@@ -133,7 +154,7 @@ class SVersion {
       tool.setStorage('switch_x', that.switchPos.x);
       tool.setStorage('switch_y', that.switchPos.y);
     });
-    $.bind($switch, 'touchmove', function(e) {            
+    $.bind($switch, 'touchmove', function(e) {
       if (e.touches.length > 0) {
         let offsetX = e.touches[0].pageX - that.switchPos.startX,
             offsetY = e.touches[0].pageY - that.switchPos.startY;

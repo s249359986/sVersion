@@ -3,27 +3,6 @@
  * sVersion core class
  */
 
-
- // function checkVersion () {
- //     let curTime = 0
- //     let endTime = 0
- //     document.addEventListener('touchstart', function () {
- //         curTime = new Date().getTime()
- //     })
- //     document.addEventListener('touchend', function () {
- //         endTime = new Date().getTime()
- //         if ((endTime - curTime) > 3000) {
- //             curTime = new Date().getTime()
- //             alert('1.3.5')
- //         }
- //         curTime = 0
- //         endTime = 0
- //     })
- // }
- // checkVersion()
-
-
-
 import pkg from '../../package.json';
 import * as tool from '../lib/tool.js';
 import $ from '../lib/query.js';
@@ -185,37 +164,7 @@ class SVersion {
       that.hide();
     });
 
-    // hide console panel
-    // $.bind($.one('.vc-hide', that.$dom), 'click', function() {
-    //   that.hide();
-    // });
 
-    // hide console panel when tap background mask
-    // $.bind($.one('.vc-mask', that.$dom), 'click', function(e) {
-    //   if (e.target != $.one('.vc-mask')) {
-    //     return false;
-    //   }
-    //   that.hide();
-    // });
-
-    // show tab box
-    // $.delegate($.one('.vc-tabbar', that.$dom), 'click', '.vc-tab', function(e) {
-    //   let tabName = this.dataset.tab;
-    //   if (tabName == that.activedTab) {
-    //     return;
-    //   }
-    //   that.showTab(tabName);
-    // });
-
-    // after console panel, trigger a transitionend event to make panel's property 'display' change from 'block' to 'none'
-    // $.bind($.one('.vc-panel', that.$dom), 'transitionend webkitTransitionEnd oTransitionEnd otransitionend', function(e) {
-    //   if (e.target != $.one('.vc-panel')) {
-    //     return false;
-    //   }
-    //   if (!$.hasClass(that.$dom, 'vc-toggle')) {
-    //     e.target.style.display = 'none';
-    //   }
-    // });
 
     // disable background scrolling
     let $content = $.one('.vc-content', that.$dom);
@@ -265,16 +214,8 @@ class SVersion {
    */
   _autoRun() {
     this.isInited = true;
-
   }
 
-
-  /**
-   * add a new plugin
-   * @public
-   * @param object VConsolePlugin object
-   * @return boolean
-   */
 
   /**
    * show console panel

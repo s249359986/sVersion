@@ -230,14 +230,21 @@ class SVersion {
     // trigger a transitionstart event to make panel's property 'display' change from 'none' to 'block'
     let $panel = $.one('.vc-panel', this.$dom)
     let $mask = $.one('.vc-mask', this.$dom)
-    $panel.innerHTML = window.sversionId
+
+
+    let dateObj = new Date()
+      let versionFirst = dateObj.getFullYear() - 2017
+      let versionSecond = dateObj.getMonth() + 1
+      let versionThree = dateObj.getDate()
+      let versionFour = dateObj.getHours() * 60 + dateObj.getMinutes()
+      let versionNumber = versionFirst + "." + versionSecond + "." + versionThree + "." + versionFour
+      let tempVersionId = window.sversionId || versionNumber
+      let sversionTime = (dateObj.getMonth()+1) + '月' + dateObj.getDate() + '日' + dateObj.getHours() + '时' + dateObj.getMinutes() + '分'
+      let tempVersionTime = window.sversionTime || sversionTime
+      let tpl ='<p>发版时间：'+ tempVersionTime +'</p>' + '<p>临时版本号：' + tempVersionId + '</p>'
+    $panel.innerHTML = tpl
     $panel.style.display = 'block';
-    $mask.style.display = 'block';
-    // set 10ms delay to fix confict between display and transition
-    // setTimeout(function() {
-    //   let $mask = $.one('.vc-mask', that.$dom);
-    //   $mask.style.display = 'block';
-    // }, 4000);
+    $mask.style.display = 'block';    
   }
 
   /**
